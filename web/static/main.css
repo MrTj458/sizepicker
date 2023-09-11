@@ -1,0 +1,81 @@
+* {
+  background-color: #333;
+  color: #eee;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#choices {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.controls {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.selected {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn {
+  padding: 16px 32px;
+  border: 1px solid #eee;
+  background-color: #333;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #eee;
+  color: #333;
+}
+
+#nameField {
+  padding: 8px 16px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 16px;
+}
