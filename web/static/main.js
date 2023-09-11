@@ -22,6 +22,10 @@ let socket = new WebSocket(
 
 let data = {};
 
+socket.addEventListener("error", (e) => {
+  alert("The websocket ran into an error. Please refresh and try again.");
+});
+
 socket.addEventListener("message", (e) => {
   data = JSON.parse(e.data);
   console.log(data);
