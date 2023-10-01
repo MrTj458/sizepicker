@@ -5,7 +5,7 @@ const showBtn = document.getElementById("show");
 const cards = document.getElementById("cards");
 const choices = document.getElementById("choices");
 
-const vals = [1, 2, 3, 5, 8];
+const vals = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
 vals.forEach((v) => {
   el = document.createElement("btn");
   el.classList.add("card");
