@@ -14,7 +14,7 @@ const handleSubmit = () => {
   <form @submit.prevent="handleSubmit">
     <article>
       <header>Join a room</header>
-      <input v-model="name" type="text" name="name" placeholder="Name" />
+      <input v-model="name" type="text" name="name" placeholder="Your Name" />
       <footer>
         <input type="submit" value="Join" />
       </footer>

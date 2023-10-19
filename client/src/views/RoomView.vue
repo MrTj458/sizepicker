@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -18,13 +18,15 @@ onMounted(() => {
     alert('Error creating websocket connection. Please refresh and try again')
   })
 
-  socket.addEventListener('close', () => {
-    alert('Websocket connection closed. Please refresh and try again')
-  })
-
   socket.addEventListener('open', () => {
     socket.send(JSON.stringify({ cmd: 'name', name: route.query.name }))
   })
+})
+
+onUnmounted(() => {
+  if (socket) {
+    socket.close()
+  }
 })
 
 const vals = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
@@ -110,7 +112,6 @@ const toggleShow = () => {
 }
 
 article {
-  width: 100px;
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
